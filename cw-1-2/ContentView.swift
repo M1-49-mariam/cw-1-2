@@ -9,113 +9,155 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack{
-            Color("Background")
+  
+        ZStack(alignment: .top) {
+            Color(.darkGray)
                 .ignoresSafeArea()
             
-            VStack {
-                HStack{
+            VStack(spacing:25) {
+                
+                HStack {
+                    
                     Image("kabaa")
                         .resizable()
                         .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
                         .frame(width: 30, height: 30)
                         .foregroundColor(.white)
-                    
-                    Spacer()
-                    
-                    Image(systemName: "gear")
-                        .resizable()
-                    frame(width: 30, height:30 )
-                        .foregroundColor(.white)
-                }
-                .padding()
+                        .scaledToFit()
+            
+            Spacer()
                 
-                
-                HStack (alignment: .bottom){
-                    Text("20:10")
-                        .font(.system(size: 13, weight: .bold, design: .rounded))
-                    
-                }
-                Text("مضى على الاذان")
-                HStack {
-                    Image (systemName: "chevron.left")
-                    
-                    Spacer()
-                    
-                    Text("٢٨ ابريل - ٥ رمضان")
-                    
-                    Spacer()
-                    
-                    Image(systemName: "chevron.right")
-                }
-                
-                .padding()
-                .background(Color.white.opacity(0.2))
-                .padding(.vertical)
-                
-                VStack(spacing:16) {
-                    
-                    HStack{
-                        Spacer()
-                        Text("3:44 AM")
-                        Spacer()
-                        Text("الفجر")
-                        Spacer()
-                    }
-                    
-                    HStack{
-                        Spacer()
-                        Text("5:09 AM")
-                        Spacer()
-                        Text("الشروق")
-                        Spacer()
-                    }
-                    
-                    HStack{
-                        Spacer()
-                        Text("11:46 AM")
-                        Spacer()
-                        Text("الظهر")
-                        Spacer()
-                    }
-                    
-                    HStack{
-                        Spacer()
-                        Text("3:21 PM")
-                        Spacer()
-                        Text("العصر")
-                        Spacer()
-                    }
-                    
-                    HStack{
-                        Spacer()
-                        Text("6:22 PM")
-                        Spacer()
-                        Text("المغرب")
-                        Spacer()
-                    }
-                    
-                    HStack{
-                        Spacer()
-                        Text("7:45 PM")
-                        Spacer()
-                        Text("العشا")
-                        Spacer()
-                    }
-                }
-                
-                .padding()
-                .background(Color.white.opacity(0.2))
+                Image(systemName: "gear")
+                    .resizable()
+                    .renderingMode(/*@START_MENU_TOKEN@*/.template/*@END_MENU_TOKEN@*/)
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.white)
+                    .scaledToFit()
                 
             }
             
-            .foregroundColor(.white)
-            
-            
-            
+            .padding()
+                
+                HStack {
+                
+                    Text("02:10")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                    Text("10")
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                
+                }
+                
+                HStack {
+                    
+                    Text("مضى على الاذان")
+                        .font(.title)
+                        .foregroundColor(Color.white)
+                       
+                }
+            HStack {
+                Image(systemName: "chevron.left")
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.white)
+                Spacer()
+                Text("٢٨ ابريل - ٥ رمضان")
+                    .foregroundColor(Color.white)
+                Spacer()
+                Image(systemName: "chevron.right")
+                    .frame(width: 30, height: 30)
+                    .foregroundColor(.white)
+                
+            }
+          
+                
+                HStack{
+                    Spacer()
+                    Text("3:44 AM")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                    Text("الفجر")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                }
+                .padding()
+                
+                HStack{
+                    Spacer()
+                    Text("5:09 AM")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                    Text("الشروق")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                }
+                .padding()
+                
+                HStack{
+                    Spacer()
+                    Text("11:46 AM")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                    Text("الظهر")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                }
+                
+                .padding()
+                
+                HStack{
+                    Spacer()
+                    Text("3:21 PM")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                    Text("العصر")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                }
+                .padding()
+                
+                HStack{
+                    Spacer()
+                    Text("6:22 PM")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                    Text("المغرب")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                }
+                .padding()
+                
+                HStack{
+                    Spacer()
+                    Text("7:45 PM")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                    Text("العشاء")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.white)
+                    Spacer()
+                }
+                .padding()
+                
+        }
         }
     }
 }
+
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
